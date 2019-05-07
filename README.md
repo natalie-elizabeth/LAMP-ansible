@@ -17,7 +17,7 @@ To allow ssh connections, you can use `ssh-copy-id` to share keys. After this, y
 to use a vagrant prefix followed by the IP address.
 
 # 2. Clone the Repo
-git clone git@github.com:natalie-elizabeth/LAMP-ansible.git
+`git clone git@github.com:natalie-elizabeth/LAMP-ansible.git`
 
 # 3. Run the playbook
 While inside the vagrant machine run `ansible-playbook playbook.yml` and `ansible-playbook playbook.yml -i hosts` from outside the application
