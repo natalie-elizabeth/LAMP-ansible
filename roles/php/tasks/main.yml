@@ -1,0 +1,18 @@
+---
+# tasks file for php
+
+- name: Install php extensions
+  apt: name={{ item }} state=present
+  become: yes
+  with_items:
+    - php
+    - php-mysql
+    - php-gd
+    - php-ssh2
+    - libapache2-mod-php7.0
+    - php7.0-mbstring
+
+- name: Setup php-fpm
+  replace: dest=/etc/php/7.0/cli/php.ini regexp="(;cgi.fix_pathinfo=1)" replace="cgi.fix_pathinfo=0"
+  become: yes
+
